@@ -5,61 +5,24 @@
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 	<link rel="shortcut icon" type="text/css" href="favicon.ico" />
 
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&v=3"></script>
 	<script data-main="js/main" src="js/lib/require-jquery.js"></script>
 </head>
 
 <body>
 	<div id="playground-app">
 		<header>
-			<h1>Geolocation Distance File Viewer</h1>
+			<h1>Playground</h1>
 		</header>
 
 		<section id="mainToolbar">
-			<label for="fileInput">Select a .distance file:</label>
-			<input type="file" id="fileInput" multiple accept="*.distances" autocomplete="off"/>
-			<input type="search" id="searchSessionInput" placeholder="Search Sessions" autocomplete="off"/>
+			<label for="fileInput">Select files:</label>
+			<input type="file" id="fileInput" multiple autocomplete="off"/>
 		</section>
 
 		<!-- container for flexible box layout model -->
 		<div class="mainContent">
-			<section id="mapView">
-				<div id="mapContainer"></div>
-			</section>
 
-			<section id="infoView">
-				<h2 class="caption etched">Info</h2>
-
-				<section class="infoBlock">
-					<output id="sessionInfo"></output>
-					<div class="toolbar sessionControls hidden">
-						<button class="button transl tiny focus-session" disabled>Focus</button>
-						<button class="button transl tiny unfocus-session" disabled>Done</button>
-					</div>
-				</section>
-				<section class="infoBlock">
-					<output id="resultInfo"></output>
-					<div class="toolbar resultControls hidden">
-					</div>
-				</section>
-				<section class="infoBlock">
-					<output id="statistics"></output>
-				</section>
-				<hr class="invisible clearfix" />
-
-			</section>
 		</div>
-
-		<section id="settings">
-			<ul>
-				<li><input type="checkbox" id="checkConnectMarkers" />
-					<label for="checkConnectMarkers">Connect markers with reference</li>
-				<li><input type="checkbox" id="checkConnectSessions" />
-					<label for="checkConnectSessions">Connect markers in sessions</li>
-			</ul>
-		</section>
-
-		<section id="mapLegend" style="display: none" ></section>
 
 		<footer>
 			<div id="stats-footer"></div>

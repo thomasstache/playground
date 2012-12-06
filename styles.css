@@ -25,23 +25,12 @@ body {
 	border-radius: 0 0 5px 5px;
 }
 
-/* main map container */
-#mapView {
-	margin: 10px 0;
-}
-#mapContainer {
-	width: 100%;
-	height: 760px;
-}
 
 /* general styles */
 
 ul { list-style: none; }
-.clearfix {clear: both; margin: 0; }
-.invisible { visibility: hidden; }
-.hidden { display: none; }
 
-.button {
+button {
 	display: inline-block;
 	padding: 4px 10px;
 	font-size: 0.9em;
@@ -54,15 +43,11 @@ ul { list-style: none; }
 	box-shadow: rgba(0,0,0,0.1) 0 1px 3px 0, inset rgba(255,255,255,0.8) 0 1px 1px 0;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.8);
 }
-.transl {
-	border-color: rgba(145,145,145,0.7);
-	background-color: rgba(0,0,0,0.1);
-}
-.button.tiny {
+button.tiny {
 	font-size: 11px; line-height: 14px;
 	padding: 1px 4px;
 }
-.button[disabled] {
+button[disabled] {
 	opacity: 0.5;
 }
 
@@ -71,93 +56,15 @@ ul { list-style: none; }
 #mainToolbar {
 	position: relative;
 }
-#searchSessionInput {
+#searchInput {
 	position: absolute;
 	right: 0;
-}
-
-/* Legend */
-
-#mapLegend {
-	margin: 10px 0 -10px 0; /* this is the last element on the page, pull up the bottom border with - margin */
-}
-ul.legend {
-	font-size: 80%;
-	padding: 0 20px;
-}
-ul.legend li {
-	margin: 2px;
-	display: inline-block;
-}
-
-ul.legend li span {
-	vertical-align: middle;
-}
-ul.legend img,
-ul.legend li .colorswatch {
-	margin: 0 5px;
-}
-
-ul.legend li .colorswatch {
-	display: inline-block;
-	border-radius: 2.5px;
-	width: 30px;
-	height: 2.5ex;
-}
-
-/* Session Info Display */
-
-#infoView {
-	position: relative;
-	min-height: 6em;
-	margin: 10px 0;
-	padding: 8px;
-	border: 1px solid rgba(152, 180, 152, .8);
-	border-radius: 5px;
-	background: -webkit-linear-gradient(top, rgba(226, 236, 217, 0.8) 5%, rgba(202, 221, 183, 0.8) 100%);
-	background: linear-gradient(to bottom, rgba(226, 236, 217, 0.8) 5%, rgba(202, 221, 183, 0.8) 100%);
-	background-color: rgba(202, 221, 183, 0.8);
-	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0, inset rgb(241, 247, 236) 0 1px 0 0;
 }
 
 .etched {
 	color: rgb(152, 180, 152);
 	text-shadow: rgb(255, 255, 255) 0 1px 1px;
 	font-weight: normal;
-}
-
-#infoView .caption {
-	font-size: 1.1em;
-	margin: 0 3px;
-}
-#infoView .toolbar {
-	margin: 0.5em 0;
-}
-
-.infoBlock {
-	margin: 0 10px;
-}
-
-#infoView output h3 {
-	margin: 0 0 3px 0;
-	font-size: 1em;
-}
-
-.propertyList {
-	font-family: Consolas, "Courier New", Courier, monospace;
-	margin: 0; padding: 0;
-}
-.propertyList .label {
-	font-weight: bold;
-}
-.propertyList .value {
-	font-size: 0.9em;
-}
-
-.propertyList .fileitem {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
 }
 
 header, footer, #mapView, #mapLegend, #settings, #mainToolbar {
@@ -167,39 +74,6 @@ header, footer, #mapView, #mapLegend, #settings, #mainToolbar {
 	user-select: none;
 }
 
-/* Expand layout for widescreen displays */
-
-@media screen and (min-width: 1000px) {
-	.mainContent {
-		display: -webkit-flex; /* Chrome uses new (2012) spec draft */
-		display: -moz-box; /* Firefox uses previous (2009) draft */
-		width: 100%;
-	}
-	#mapView {
-		-webkit-flex: 1;
-		-moz-box-flex: 1;
-		margin-right: 10px;
-	}
-	#infoView {
-		width: 300px;
-		margin-left: 10px;
-	}
-	.infoBlock {
-		margin: 10px;
-	}
-	#infoView .caption, #infoView output h3 {
-		text-align: center;
-	}
-}
-
-/* InfoView LCD layout for narrow screens */
-
-@media screen and (max-width: 1000px) {
-	#infoView .caption {
-		position: absolute;
-		right: 1em;
-	}
-	#infoView .infoBlock {
-		float: left;
-	}
-}
+.clearfix {clear: both; margin: 0; }
+.invisible { visibility: hidden; }
+.hidden { display: none; }
